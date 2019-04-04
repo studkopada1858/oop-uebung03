@@ -1,4 +1,4 @@
-_Übungsaufgabe zur Veranstaltung [Programmieren 2](https://hsro-wif-prg2.github.io) im [Bachelorstudiengang Wirtschaftsinformatik](https://www.fh-rosenheim.de/technik/informatik-mathematik/wirtschaftsinformatik-bachelor/) an der [Hochschule Rosenheim](http://www.fh-rosenheim.de)._
+_Übungsaufgabe zur Veranstaltung [Programmieren 2](https://hsro-wif-oop.github.io) im [Bachelorstudiengang Wirtschaftsinformatik](https://www.th-rosenheim.de/technik/informatik-mathematik/wirtschaftsinformatik-bachelor/) an der [Hochschule Rosenheim](http://www.th-rosenheim.de)._
 
 
 # Generics
@@ -8,7 +8,7 @@ In dieser Übung überarbeiten wir die Datenstrukturen _Stack_ und _Set_ aus den
 
 ## Teilaufgabe 1: Stack
 
-Gegeben ist die Musterlösung aus [Übung 1](https://github.com/hsro-wif-prg2/uebung01), welche einen Stack für `char` implementiert.
+Gegeben ist die Musterlösung aus [Übung 1](https://github.com/hsro-wif-oop/uebung01), welche einen Stack für `char` implementiert.
 
 - Modifizieren Sie das Interface `Stack` sowie die Klasse `StackImpl` so, dass sie generisch sind.
 - Ändern Sie anschließend den Testcase `StackTest` so, dass die generischen Klassen verwendet werden.
@@ -18,7 +18,7 @@ Gegeben ist die Musterlösung aus [Übung 1](https://github.com/hsro-wif-prg2/ue
 
 ## Teilaufgabe 2: Set
 
-Gegeben ist die Musterlösung aus [Übung 2](https://github.com/hsro-wif-prg2/uebung02), welche ein Set für `String` implementiert, sowie die Klasse `Duplikate`, welche Wörter findet, welche mindestens zwei mal vorkommen.
+Gegeben ist die Musterlösung aus [Übung 2](https://github.com/hsro-wif-oop/uebung02), welche ein Set für `String` implementiert, sowie die Klasse `Duplikate`, welche Wörter findet, welche mindestens zwei mal vorkommen.
 
 - Modifizieren Sie das Interface `Set` sowie die Klasse `SetImpl` so, dass sie generisch sind.
 - Ändern Sie anschließend den Testcase `SetTest` so, dass die generischen Klassen verwendet werden.
