@@ -2,7 +2,8 @@ package ueb03;
 
 import java.util.NoSuchElementException;
 
-public class SetImpl<T extends Comparable<T>> implements Set<T> {
+public class SetImpl<T extends Comparable> implements Set<T> {
+
 	class Element {
 		T val;
 		Element left, right;
@@ -27,6 +28,7 @@ public class SetImpl<T extends Comparable<T>> implements Set<T> {
 
 	@Override
 	public boolean add(T s) {
+
 		return addElement(new Element(s, null, null));
 	}
 

@@ -3,7 +3,8 @@ package ueb03;
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 
-public class SetImplComparator<T> implements SetComparator<T> {
+public class SetImplComparator<T> implements Set<T> {
+
 	class Element {
 		T val;
 		Element left, right;
@@ -25,14 +26,16 @@ public class SetImplComparator<T> implements SetComparator<T> {
 	}
 
 	Element root;
+
 	Comparator<T> comp;
 
-	SetImplComparator(Comparator<T> comp) {
+	public SetImplComparator(Comparator<T> comp) {
 		this.comp = comp;
 	}
 
 	@Override
 	public boolean add(T s) {
+
 		return addElement(new Element(s, null, null));
 	}
 
@@ -47,7 +50,7 @@ public class SetImplComparator<T> implements SetComparator<T> {
 
 		Element it = root;
 		while (it != null) {
-			int c = comp.compare(e.val, it.val);
+			int c = comp.compare(e.val,it.val);
 			if (c == 0)
 				return false;
 			else if (c < 0) {
@@ -100,7 +103,7 @@ public class SetImplComparator<T> implements SetComparator<T> {
 
 		Element it = root;
 		while (it != null) {
-			if (comp.compare(s, it.val) < 0) {
+			if (comp.compare(s,it.val) < 0) {
 				if (it.left != null && it.left.val.equals(s))
 					return removeElement(it, it.left);
 				it = it.left;

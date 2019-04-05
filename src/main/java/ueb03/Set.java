@@ -1,6 +1,6 @@
 package ueb03;
 
-interface Set<T extends Comparable<T>> {
+interface Set<T>  {
 	/**
 	 * Fügt das übergebene Element in das Set ein.
 	 * @param s

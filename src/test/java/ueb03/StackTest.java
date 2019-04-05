@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class StackTest {
 	@Test
 	void testStack() {
-		Stack<Character> cs = new StackImpl<>();
+		Stack<Character> cs = new StackImpl();
 
 		// zu Beginn muss der Stack leer sein!
 		assertEquals(0, cs.size());
@@ -27,7 +27,7 @@ public class StackTest {
 
 		// ...und rückwärts!
 		for (int i = a.length-1; i >= 0; i--)
-			assertEquals(a[i], (char) cs.pop());
+			assertEquals(new Character(a[i]), cs.pop());
 
 		// Jetzt muss er wieder leer sein!
 		assertEquals(0, cs.size());

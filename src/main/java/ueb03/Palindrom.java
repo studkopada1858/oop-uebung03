@@ -5,7 +5,7 @@ public class Palindrom {
 		if (s.length() == 1)
 			return true;
 
-		Stack<Character> stack = new StackImpl<>();  // nach new... kann verkuerzt <> geschrieben werden
+		Stack<Character> stack = new StackImpl();
 		char[] cs = s.toLowerCase().replaceAll(" ", "").toCharArray();
 
 		// die erste Haelfte auf den Stack legen

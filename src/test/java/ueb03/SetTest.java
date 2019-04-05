@@ -2,6 +2,7 @@ package ueb03;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Comparator;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,7 +10,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class SetTest {
 	@Test
 	void testStringSet() {
-		Set<String> impl = new SetImpl<>();
+
+		// This is the version using the comparable version
+		//Set<String> impl = new SetImpl();
+
+		// this is the version using Comparator
+		Comparator<String> comp = new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				return o1.compareTo(o2);
+			}
+		};
+		Set<String> impl = new SetImplComparator( comp);
+
+		// With comparator as Lambda expression
+		//Set<String> impl = new SetImplComparator<String>( (String x, String y) ->  x.compareTo(y) );
+
 		String str = "In Ulm und um Ulm und um Ulm herum";
 
 		for (String c : str.split(" ")) {
