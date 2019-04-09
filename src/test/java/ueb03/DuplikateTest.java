@@ -7,7 +7,7 @@ import static ueb03.Duplikate.findeDuplikate;
 
 class DuplikateTest {
 	@Test
-	void testFindeDuplikate() {
+	void testnFindeDuplikate() {
 		String t1 = "In Ulm! und um Ulm! und um Ulm herum!";
 
 		Set<String> s1 = findeDuplikate(t1);
